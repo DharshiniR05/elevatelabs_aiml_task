@@ -101,10 +101,75 @@ Implemented Simple and Multiple Linear Regression using the Housing dataset to p
 ## ✅ Output  
 - A working Linear Regression model capable of predicting housing prices  
 - Plotted regression line and printed evaluation metrics  
-- Understood which features most influence price prediction  
+- Understood which features most influence price prediction
 
-# Fare Grouping
-df['FareGroup'] = pd.qcut(df['Fare'], 4, labels=["Low", "Medium", "High", "Very High"])
-sns.countplot(data=df, x='FareGroup', hue='Survived')
-plt.title("Survival by Fare Range")
-plt.show()
+
+ 
+
+# 🧹Task 4: Classification with Logistic Regression
+# 📘 Overview
+In this task, I implemented a binary classification model using Logistic Regression to predict class labels based on given features.
+
+# 🎯 Objective:
+-Choose a binary classification dataset.
+-Split the dataset into training and testing sets.
+-Standardize the features for better model performance.
+-Train a Logistic Regression model.
+-Evaluate the model using key metrics like confusion matrix, precision, recall, and ROC-AUC.
+-Tune the decision threshold and explain the sigmoid function.
+
+# 📂 Dataset
+File : data.csv
+Source : Provided dataset for internship task.
+
+# 🛠️ Tools Used:
+~ Python
+~ Pandas – Data handling and preprocessing
+~ Matplotlib – Data visualization
+~ Scikit-learn – Model building and evaluation
+
+# 🧪 Steps:
+1.Load the Dataset
+
+2.Read the CSV file using Pandas.
+
+3.Data Preprocessing
+
+4.Handle missing values if any.
+
+5.Ensure target variable is binary (0/1).
+
+6.Split Dataset
+
+7.Train/Test split using train_test_split from Scikit-learn.
+
+8.Feature Scaling
+
+9.Standardize numerical features using StandardScaler.
+
+10.Model Training
+
+11.Fit a Logistic Regression model on the training data.
+
+12.Prediction & Evaluation
+
+13.Predict class labels on test data.
+
+14.Calculate metrics:
+
+Confusion Matrix
+
+Precision, Recall, F1-score
+
+ROC Curve and AUC score
+
+15.Threshold Tuning
+
+Adjust classification threshold for better balance between precision and recall.
+
+16.Sigmoid Function Explanation
+
+Demonstrated how Logistic Regression uses the sigmoid function to map predictions between 0 and 1.
+
+# ✅ Output
+A trained Logistic Regression model with evaluation metrics and visualizations (confusion matrix & ROC curve).
