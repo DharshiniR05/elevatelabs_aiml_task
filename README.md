@@ -256,3 +256,63 @@ This dataset contains patient health information and a target variable:
 - Accuracy vs Tree Depth graph
 - Feature importance bar chart
 - Confusion matrix heatmap
+
+
+# Task 6: K-Nearest Neighbors (KNN) Classification
+
+## 📌 Objective
+The objective of this task is to understand and implement the **K-Nearest Neighbors (KNN)** algorithm for classification problems using the Iris dataset.
+
+
+## 🛠 Tools & Libraries Used
+- **Python**
+- **Pandas** – Data handling
+- **NumPy** – Numerical computations
+- **Matplotlib** – Data visualization
+- **Scikit-learn** – Machine learning model & evaluation
+
+
+## 📂 Dataset
+- **Name**: Iris Dataset (`Iris.csv`)
+- **Description**: A classic dataset containing 150 samples of iris flowers, with 4 features:
+  - Sepal Length
+  - Sepal Width
+  - Petal Length
+  - Petal Width  
+  And the target class:
+  - Iris-setosa
+  - Iris-versicolor
+  - Iris-virginica
+
+## 🚀 Steps Implemented
+
+### **Step 1: Choose Dataset & Normalize Features**
+- Loaded the Iris dataset using Pandas.
+- Normalized the features using **StandardScaler**.
+
+### **Step 2: Train the Model using KNeighborsClassifier**
+- Used `KNeighborsClassifier` from **scikit-learn**.
+- Initially tested with a default value of `k=5`.
+
+### **Step 3: Experiment with Different Values of K**
+- Tested multiple values of `k` to find the best accuracy.
+- Selected the best `k` value for final model training.
+
+### **Step 4: Evaluate Model**
+- Evaluated using:
+  - **Accuracy score**
+  - **Confusion matrix**
+  - **Classification report**
+
+### **Step 5: Visualize Decision Boundaries**
+- Used **PCA** to reduce features to 2D for visualization.
+- Plotted decision boundaries showing separation between classes.
+
+## 📊 Results
+- Best k-value: Varies based on experiment (commonly k=5)  
+- Accuracy: Achieved ~97% accuracy on the test dataset.
+- The decision boundary plot clearly showed class separation.
+
+## 📷 Output Visualization
+1. Confusion Matrix
+2. PCA Decision Boundary plot
