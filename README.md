@@ -316,3 +316,62 @@ The objective of this task is to understand and implement the **K-Nearest Neighb
 ## 📷 Output Visualization
 1. Confusion Matrix
 2. PCA Decision Boundary plot
+
+
+
+# Task 7: Support Vector Machines (SVM)
+
+## 📌 Objective
+The goal of this task was to **use SVMs for linear and non-linear classification** on synthetic datasets and analyze their performance using decision boundaries, cross-validation, and hyperparameter tuning.
+
+## 🛠 Tools & Libraries Used
+- **Python 3.x**
+- **Scikit-learn** → Model building, pipelines, SVM training, evaluation
+- **NumPy** → Numerical computations
+- **Matplotlib** → Data visualization & decision boundary plotting
+
+## 📂 Steps Performed
+
+### 1️⃣ Load & Prepare Dataset
+- Created **two binary classification datasets**:
+  - **Linearly separable**: `make_blobs`
+  - **Non-linear**: `make_moons`
+- Split data into **training (70%)** and **testing (30%)** sets.
+- Standardized features using `StandardScaler` for better SVM performance.
+
+### 2️⃣ Train SVM Models
+- **Linear SVM** for linearly separable data.
+- **RBF Kernel SVM** for non-linear data patterns.
+- Used **`Pipeline`** to combine scaling and classification steps.
+
+### 3️⃣ Visualize Decision Boundaries
+- Implemented a helper function to **plot decision boundaries** for both kernels.
+- Showed how linear SVM creates straight hyperplanes, while RBF can curve around data.
+
+### 4️⃣ Model Evaluation
+- Evaluated on **test sets** using:
+  - **Accuracy Score**
+  - **Classification Report**
+  - **Confusion Matrix**
+- Compared performance between linear and RBF kernels.
+
+### 5️⃣ Cross-Validation
+- Applied **5-fold Stratified Cross-Validation** to estimate performance more robustly.
+- Computed **mean accuracy** and **standard deviation**.
+
+### 6️⃣ Hyperparameter Tuning
+- Tuned **C** (regularization) and **gamma** (kernel coefficient) for the RBF SVM using `GridSearchCV`.
+- Identified **best parameters** and improved classification accuracy.
+- Visualized decision boundary for the tuned model.
+
+## 📊 Results Summary
+| Dataset       | Kernel  | Test Accuracy |
+|---------------|---------|--------------|
+| Blobs         | Linear  | ~99%         |
+| Moons         | RBF     | ~98% (tuned) |
+
+- **Linear SVM** performed excellently on linearly separable data.
+- **RBF SVM** captured complex, non-linear boundaries effectively.
+
+
+
