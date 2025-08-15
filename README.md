@@ -375,3 +375,69 @@ The goal of this task was to **use SVMs for linear and non-linear classification
 
 
 
+# Task 8: Clustering with K-Means (Mall Customer Dataset)
+
+## 📌 Objective
+Perform **unsupervised learning** using **K-Means clustering** to group mall customers into segments based on their characteristics, helping businesses target customers effectively.
+
+
+## 🛠 Tools & Libraries
+- **Python**
+- **Pandas** → data loading and manipulation
+- **Scikit-learn** → K-Means, PCA, evaluation metrics
+- **Matplotlib** → visualization
+- **NumPy** → numerical operations
+
+
+## 📂 Dataset
+- **Mall Customer Segmentation Data**  
+  Example columns:
+  - `CustomerID` → Unique ID of customer
+  - `Gender` → Male/Female
+  - `Age` → Customer's age
+  - `Annual Income (k$)` → Annual income in thousand dollars
+  - `Spending Score (1-100)` → Score assigned by the mall
+
+
+## 🧪 Steps Performed
+
+1. **Load and Preprocess Data**
+   - Loaded dataset from CSV.
+   - Selected relevant features: `Annual Income (k$)` and `Spending Score (1-100)`.
+   - Scaled features using `StandardScaler` for better clustering.
+
+2. **Dimensionality Reduction (Optional)**
+   - Used **PCA** to project features into 2D for visualization (helpful if more than 2 features are used).
+
+3. **Elbow Method**
+   - Tested K values from 2 to 10.
+   - Plotted **Inertia (SSE)** vs **K** to find the "elbow" point.
+
+4. **Silhouette Score**
+   - Calculated silhouette score for each K to measure cluster separation quality.
+
+5. **K-Means Clustering**
+   - Fitted K-Means model with optimal K.
+   - Assigned each customer to a cluster.
+
+6. **Visualization**
+   - Scatter plot of customers, color-coded by cluster.
+   - Cluster centers marked for easy identification.
+
+7. **Evaluation**
+   - Printed final silhouette score.
+   - Analyzed cluster sizes and average values.
+   - 
+
+## 📊 Example Output
+**Elbow Method Plot**  
+Shows the point where inertia decreases sharply → best K.
+
+**Silhouette Score Table**  
+Helps validate the quality of chosen clusters.
+
+**Cluster Visualization (2D View)**  
+Points represent customers, colors represent segments, red "X" = cluster center.
+
+
+
